@@ -8,7 +8,12 @@
     "build": "cd Frontend && npm run build",
     "install-deps": "cd Frontend && npm install"
   },
-  "keywords": ["react", "furniture", "ecommerce", "frontend"],
+  "keywords": [
+    "react",
+    "furniture",
+    "ecommerce",
+    "frontend"
+  ],
   "author": "",
   "license": "ISC",
   "repository": {
@@ -18,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/Vikram-amin/pepperfry-clone/issues"
   },
-  "homepage": "https://github.com/Vikram-amin/pepperfry-clone#readme"
+  "homepage": "https://github.com/Vikram-amin/pepperfry-clone#readme",
+  "dependencies": {
+    "react-scripts": "^5.0.1"
+  }
 }

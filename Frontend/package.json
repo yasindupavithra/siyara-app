@@ -4,6 +4,7 @@
   "description": "Siyara Soliwood (PVT) Ltd - Premium Wood Products and Furniture Website",
   "private": true,
   "dependencies": {
+    "-clone-frontend": "file:..",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
