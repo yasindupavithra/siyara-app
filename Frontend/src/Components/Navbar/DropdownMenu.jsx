@@ -16,11 +16,6 @@ function DropdownMenu() {
             </Link>
           </div>
           <div className="category">
-            <Link to="/services" style={{ textDecoration: 'none', color: 'inherit' }}>
-              <p>Services</p>
-            </Link>
-          </div>
-          <div className="category">
             <Link to="/projects" style={{ textDecoration: 'none', color: 'inherit' }}>
               <p>Projects</p>
             </Link>

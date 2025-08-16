@@ -11,6 +11,7 @@ import Products from '../Components/Pages/Products';
 import ProductCategory from '../Components/Pages/ProductCategory';
 import About from '../Components/Pages/About';
 import Contact from '../Components/Pages/Contact';
+import Projects from '../Components/Pages/Projects';
 import Success from '../Components/SucessPage/Success';
 import CardPayment from '../Components/CardPayment/CardPayment';
 import { MainAddress } from '../Components/Address/MainAddress';
@@ -29,6 +30,7 @@ const Routing = () => {
         <Route path="/products/:category" element={<ProductCategory />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/projects" element={<Projects />} />
         <Route path="/success" element={<Success />} />
         <Route path="/cardpayment" element={<CardPayment />} />
         <Route path="/address" element={<MainAddress />} />

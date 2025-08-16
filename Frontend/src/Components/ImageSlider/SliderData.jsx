@@ -1,14 +1,15 @@
 export const SliderData = [
     {
-        image : 'https://i.postimg.cc/ZRDmHzF1/v2k2k2t8lsjh04sdxmmq.jpg'
+        image : 'https://i.postimg.cc/LX6XRmbm/wmremove-transformed.jpg'
     },
     {
-        image : 'https://i.postimg.cc/7LSrFQ8W/inpcsrgjf60jq7vveloq.jpg'
+        image : 'https://i.postimg.cc/X7Q0Sw0B/prydumano-design-VZ2z8ozzy10-unsplash.jpg'
     },
     {
-        image : 'https://i.postimg.cc/wB8SQcyc/ygwpofykjbpbuqoea2eq.jpg'
+        image : 'https://i.postimg.cc/3x16D7wy/billy-jo-catbagan-ys-Uyvj-Coc-Wo-unsplash.jpg'
     },
     {
-        image : 'https://i.postimg.cc/900LPrWj/indoor-design-luxury-resort.jpg'
-    }
+        image : 'https://i.postimg.cc/Y9kXCs6r/the-prototype-o-NUID4-FVbu-Q-unsplash.jpg'
+    },
+    
 ];

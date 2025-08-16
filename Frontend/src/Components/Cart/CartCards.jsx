@@ -75,7 +75,7 @@ const CartCards = () => {
                   <BsLayers className="calenderIcon" />
                   <span>Assembly</span>
                 </div>
-                <p>Offered By Pepperfry</p>
+                <p>Offered By FurnitureStore</p>
                 <p>Charges ₹ 449 </p>
               </div>
 

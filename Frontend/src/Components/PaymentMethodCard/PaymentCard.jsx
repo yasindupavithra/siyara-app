@@ -51,7 +51,7 @@ export const PaymentsCard = () => {
 
           <button className="patmentBox">
             <img src={GiftCard} alt="" />
-            <div>PEPPERFRY GIFT CARD</div>
+            <div>FURNITURESTORE GIFT CARD</div>
           </button>
 
           <button className="patmentBox">

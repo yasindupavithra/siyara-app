@@ -1,6 +1,6 @@
-# Pepperfry Clone - Standalone Frontend
+# FurnitureStore Clone - Standalone Frontend
 
-A complete frontend clone of the Pepperfry furniture website built with React, Redux, and Styled Components. This version works entirely without a backend - all data is managed locally with the ability to manually add products with photos.
+A complete frontend clone of the FurnitureStore furniture website built with React, Redux, and Styled Components. This version works entirely without a backend - all data is managed locally with the ability to manually add products with photos.
 
 ## 🚀 Features
 
@@ -195,7 +195,7 @@ This project is licensed under the ISC License.
 
 ## 🙏 Acknowledgments
 
-- Original Pepperfry website for design inspiration
+- Original FurnitureStore website for design inspiration
 - React and Redux communities for excellent documentation
 - Material-UI for component library
 

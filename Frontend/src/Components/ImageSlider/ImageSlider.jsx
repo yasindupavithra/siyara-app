@@ -17,19 +17,19 @@ const ImageSlider = () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const carouselRef = useRef();
 
-  // Auto-slide every 1.5 seconds
+  // Auto-slide every 3 seconds for better user experience
   useEffect(() => {
     const interval = setInterval(() => {
       const nextIndex = (activeItemIndex + 1) % SliderData.length;
       carouselRef.current.goTo(nextIndex);
       setActiveItemIndex(nextIndex);
-    }, 1500);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [activeItemIndex]);
 
   return (
-    <div style={{ width: "100%", maxWidth: "1600px", margin: "0 auto" }}>
+    <div style={{ width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
       <Carousel
         ref={carouselRef}
         itemsToShow={1}
@@ -44,16 +44,17 @@ const ImageSlider = () => {
               alt={`slide-${i}`}
               style={{
                 width: "100%",
-                maxHeight: "650px", // 👈 Increased height
+                maxHeight: "450px", // 👈 Reduced height for better balance
                 objectFit: "cover",
-                borderRadius: "10px"
+                borderRadius: "8px",
+                boxShadow: "0 4px 8px rgba(0,0,0,0.1)"
               }}
             />
           </div>
         ))}
       </Carousel>
 
-      <div style={{ display: "flex", justifyContent: "center", marginTop: "12px" }}>
+      <div style={{ display: "flex", justifyContent: "center", marginTop: "15px" }}>
         {SliderData.map((_, idx) => (
           <Button
             key={idx}

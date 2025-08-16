@@ -86,7 +86,7 @@ const CheckoutFooter = () => {
             </div>
           </Grid>
           <CopyRight>
-            Copyright 2021 Pepperfry.com. All rights Reserved.
+            Copyright 2021 FurnitureStore.com. All rights Reserved.
           </CopyRight>
         </Flex>
       </div>

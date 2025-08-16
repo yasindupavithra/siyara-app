@@ -1,7 +1,7 @@
 {
   "name": "-clone-frontend",
   "version": "1.0.0",
-  "description": "A standalone frontend clone of the Pepperfry Website with local data management",
+  "description": "A standalone frontend clone of the FurnitureStore Website with local data management",
   "main": "index.js",
   "scripts": {
     "start": "cd Frontend && npm start",
@@ -18,12 +18,12 @@
   "license": "ISC",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Vikram-amin/pepperfry-clone.git"
+    "url": "git+https://github.com/Vikram-amin/furniturestore-clone.git"
   },
   "bugs": {
-    "url": "https://github.com/Vikram-amin/pepperfry-clone/issues"
+          "url": "https://github.com/Vikram-amin/furniturestore-clone/issues"
   },
-  "homepage": "https://github.com/Vikram-amin/pepperfry-clone#readme",
+      "homepage": "https://github.com/Vikram-amin/furniturestore-clone#readme",
   "dependencies": {
     "react-dom": "^19.1.1",
     "react-scripts": "^5.0.1",

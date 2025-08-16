@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
 import styled from 'styled-components';
@@ -62,6 +62,7 @@ const ProjectImage = styled.div`
   font-size: 4rem;
   position: relative;
   overflow: hidden;
+  cursor: ${props => props.hasImage ? 'pointer' : 'default'};
 
   &::before {
     content: '';
@@ -73,12 +74,33 @@ const ProjectImage = styled.div`
     background: ${props => props.hasImage ? 'none' : 'linear-gradient(45deg, rgba(194, 171, 142, 0.8), rgba(177, 154, 125, 0.8))'};
     opacity: 0.9;
   }
+
+  &:hover {
+    &::after {
+      content: '🔍 Click to view images';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      z-index: 10;
+    }
+  }
 `;
 
 const ProjectImageElement = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+
+  ${ProjectImage}:hover & {
+    transform: scale(1.05);
+  }
 `;
 
 const ProjectIcon = styled.div`
@@ -92,224 +114,230 @@ const ProjectContent = styled.div`
 
 const ProjectTitle = styled.h3`
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 0;
   font-size: 1.3rem;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+  text-align: center;
+`;
+
+// Modal Styles
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+`;
+
+const ModalContent = styled.div`
+  background: white;
+  border-radius: 15px;
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const ModalImage = styled.img`
+  width: 100%;
+  height: auto;
+  max-height: 70vh;
+  object-fit: contain;
+`;
+
+const ModalCloseButton = styled.button`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+`;
+
+const ModalTitle = styled.div`
+  margin-top: 10px;
+  color: #333;
+  font-size: 1.2rem;
   font-weight: 600;
   font-family: 'Manrope', sans-serif;
 `;
 
-const ProjectTitleSinhala = styled.h4`
-  color: #666;
-  margin-bottom: 15px;
-  font-size: 1rem;
-  font-weight: 500;
-  font-family: 'Manrope', sans-serif;
-`;
-
-const ProjectDescription = styled.p`
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 15px;
-  font-size: 0.95rem;
-`;
-
-const ProjectFeatures = styled.div`
-  margin-bottom: 20px;
-`;
-
-const FeatureList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const FeatureItem = styled.li`
-  color: #555;
-  margin-bottom: 6px;
-  font-size: 0.85rem;
+const NavButtons = styled.div`
   display: flex;
-  align-items: center;
-
-  &::before {
-    content: '✓';
-    color: #C2AB8E;
-    font-weight: bold;
-    margin-right: 8px;
-  }
+  justify-content: space-between;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0 20px;
 `;
 
-const ProjectCategory = styled.span`
-  background: #C2AB8E;
-  color: white;
-  padding: 5px 10px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 500;
-`;
-
-const ContactButton = styled.button`
-  background: #C2AB8E;
+const NavButton = styled.button`
+  background: rgba(0,0,0,0.6);
   color: white;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 500;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 22px;
   cursor: pointer;
-  font-family: 'Manrope', sans-serif;
-  transition: all 0.3s ease;
-  margin-top: 15px;
-  width: 100%;
+  transition: background 0.3s ease;
+  z-index: 1001;
 
   &:hover {
-    background: #B19A7D;
-    transform: translateY(-2px);
+    background: rgba(0,0,0,0.9);
   }
 `;
 
 const Projects = () => {
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Project data with multiple images
   const projects = [
     {
-      icon: "🚪",
-      title: "Doors & Door Frames",
-      titleSinhala: "දොරවල් සහ දොර රාමු",
-      description: "High-quality wooden  frames crafted with precision and durability. Available in various designs and finishes to match your interior style.",
-      features: [
-        "Solid wood construction - ඝන ලී ඉදිකිරීම",
-        "Multiple design options - විවිධ නිර්මාණ විකල්ප",
-        "Custom sizing available - අභිරුචි ප්‍රමාණ",
-        "Premium finishes - උසස් අවසන් කිරීම්",
-        "Durable and long-lasting - කාලෝචිත සහ දිගු කාලයක් පවතින"
-      ],
-      category: "Wooden Doors",
-      image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      title: "P02",
+      images: [
+        "https://i.postimg.cc/t40rSLW2/IMG-20250806-WA0170.jpg",
+        "https://i.postimg.cc/HW608F6V/IMG-20250806-WA0166.jpg",
+        "https://i.postimg.cc/y8cSjGyh/IMG-20250806-WA0168.jpg"
+      ]
     },
     {
-      icon: "🪟",
-      title: "Window Frame & Sashes",
-      titleSinhala: "කවුළු රාමු සහ කවුළු පුවරු",
-      description: "Custom wooden window frames and sashes designed for both functionality and aesthetic appeal. Perfect for traditional and modern homes.",
-      features: [
-        "Weather-resistant design - කාලගුණ ප්‍රතිරෝධී නිර්මාණය",
-        "Smooth operation - සුමට ක්‍රියාකාරිත්වය",
-        "Custom measurements - අභිරුචි මිනුම්",
-        "Multiple wood types - විවිධ ලී වර්ග",
-        "Professional installation - වෘත්තීය ස්ථාපනය"
-      ],
-      category: "Window Frames",
-      image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80"
+      title: "Kitchen Cabinets",
+      images: [
+        "https://i.postimg.cc/rsNSfPkY/IMG-20250806-WA0143.jpg",
+        "https://i.postimg.cc/63khTZWt/IMG-20250806-WA0171.jpg",
+        "https://i.postimg.cc/8zpmFNSJ/IMG-20250816-WA0029.jpg",
+        "https://i.postimg.cc/yYVZjjr2/IMG-20250816-WA0022.jpg"
+      ]
     },
     {
-      icon: "🛤️",
-      title: "Hand Rail",
-      titleSinhala: "අත පොරොව",
-      description: "Elegant wooden hand rails for staircases and balconies. Combining safety with sophisticated design for your home or commercial space.",
-      features: [
-        "Safety-compliant design - ආරක්ෂාවට අනුකූල නිර්මාණය",
-        "Smooth finish - සුමට අවසන් කිරීම",
-        "Custom designs - අභිරුචි නිර්මාණ",
-        "Durable construction - කාලෝචිත ඉදිකිරීම",
-        "Easy maintenance - පහසු නඩත්තුව"
-      ],
-      category: "Safety & Design",
-      image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      title: "Wardrobes & Closets",
+      images: [
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"
+      ]
     },
     {
-      icon: "🥘",
-      title: "Pantry Cupboards",
-      titleSinhala: "පාන්ත්‍රි රාක්ක",
-      description: "Custom pantry cupboards designed to maximize storage space while maintaining a beautiful appearance. Perfect for kitchens and storage areas.",
-      features: [
-        "Optimized storage space - ප්‍රශස්ත ගබඩා අවකාශ",
-        "Adjustable shelves - සකස් කළ හැකි රාක්ක",
-        "Quality hardware - උසස් උපාංග",
-        "Custom dimensions - අභිරුචි මාන",
-        "Professional finish - වෘත්තීය අවසන් කිරීම"
-      ],
-      category: "Storage Solutions",
-      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      title: "Staircases & Railings",
+      images: [
+        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80"
+      ]
     },
     {
-      icon: "🏠",
-      title: "Ceiling & Roof",
-      titleSinhala: "සිවිලිම සහ වහල",
-      description: "Wooden ceiling and roof solutions that add warmth and character to any space. Available in various patterns and finishes.",
-      features: [
-        "Acoustic benefits - ශබ්ද විද්‍යාත්මක ප්‍රතිලාභ",
-        "Thermal insulation - තාප පරිවාරණය",
-        "Custom patterns - අභිරුචි රටා",
-        "Natural wood finish - ස්වාභාවික ලී අවසන් කිරීම",
-        "Professional installation - වෘත්තීය ස්ථාපනය"
-      ],
-      category: "Ceiling & Roofing",
-      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
-    },
-    {
-      icon: "🪵",
-      title: "Wooden Flooring",
-      titleSinhala: "ලී තට්ටු",
-      description: "Premium wooden flooring solutions for homes and commercial spaces. Available in various wood types, patterns, and finishes.",
-      features: [
-        "High-quality wood - උසස් තත්වයේ ලී",
-        "Multiple patterns - විවිධ රටා",
-        "Easy maintenance - පහසු නඩත්තුව",
-        "Long-lasting finish - දිගු කාලයක් පවතින අවසන් කිරීම",
-        "Professional installation - වෘත්තීය ස්ථාපනය"
-      ],
-      category: "Flooring",
-      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
+      title: "Furniture & Fixtures",
+      images: [
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80"
+      ]
     }
   ];
 
-  const handleContact = (projectName) => {
-    alert(`Thank you for your interest in ${projectName}! We'll contact you soon with more details.`);
+  const handleProjectClick = (project) => {
+    setSelectedProject(project);
+    setCurrentIndex(0);
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+  };
+
+  const showPrev = () => {
+    if (selectedProject) {
+      setCurrentIndex((prev) =>
+        prev === 0 ? selectedProject.images.length - 1 : prev - 1
+      );
+    }
+  };
+
+  const showNext = () => {
+    if (selectedProject) {
+      setCurrentIndex((prev) =>
+        prev === selectedProject.images.length - 1 ? 0 : prev + 1
+      );
+    }
   };
 
   return (
     <ProjectsContainer>
       <Navbar />
       <ProjectsContent>
-        <ProjectsTitle>Our Wood Projects</ProjectsTitle>
+        <ProjectsTitle>Our Projects</ProjectsTitle>
         <ProjectsSubtitle>
-          Discover our premium range of wooden products and projects crafted with precision and quality materials
+          Discover our premium range of projects crafted with precision and quality materials
         </ProjectsSubtitle>
 
         <ProjectsGrid>
           {projects.map((project, index) => (
             <ProjectCard key={index}>
-              <ProjectImage hasImage={project.image}>
-                {project.image ? (
-                  <ProjectImageElement src={project.image} alt={project.title} />
+              <ProjectImage 
+                hasImage={project.images.length > 0}
+                onClick={() => handleProjectClick(project)}
+              >
+                {project.images.length > 0 ? (
+                  <ProjectImageElement src={project.images[0]} alt={project.title} />
                 ) : (
-                  <ProjectIcon>{project.icon}</ProjectIcon>
+                  <ProjectIcon>🏠</ProjectIcon>
                 )}
               </ProjectImage>
               <ProjectContent>
                 <ProjectTitle>{project.title}</ProjectTitle>
-                <ProjectTitleSinhala>{project.titleSinhala}</ProjectTitleSinhala>
-                <ProjectDescription>{project.description}</ProjectDescription>
-                
-                <ProjectFeatures>
-                  <FeatureList>
-                    {project.features.map((feature, featureIndex) => (
-                      <FeatureItem key={featureIndex}>{feature}</FeatureItem>
-                    ))}
-                  </FeatureList>
-                </ProjectFeatures>
-
-                <ProjectCategory>{project.category}</ProjectCategory>
-                
-                <ContactButton onClick={() => handleContact(project.title)}>
-                  Get Quote for {project.title}
-                </ContactButton>
               </ProjectContent>
             </ProjectCard>
           ))}
         </ProjectsGrid>
       </ProjectsContent>
+
+      {/* Image Modal */}
+      {selectedProject && (
+        <ModalOverlay onClick={closeModal}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <ModalCloseButton onClick={closeModal}>×</ModalCloseButton>
+            
+            <ModalImage
+              src={selectedProject.images[currentIndex]}
+              alt={selectedProject.title}
+            />
+            <ModalTitle>
+              {selectedProject.title} ({currentIndex + 1}/{selectedProject.images.length})
+            </ModalTitle>
+
+            {selectedProject.images.length > 1 && (
+              <NavButtons>
+                <NavButton onClick={showPrev}>‹</NavButton>
+                <NavButton onClick={showNext}>›</NavButton>
+              </NavButtons>
+            )}
+          </ModalContent>
+        </ModalOverlay>
+      )}
+
       <Footer />
     </ProjectsContainer>
   );
 };
 
-export default Projects; 
+export default Projects;

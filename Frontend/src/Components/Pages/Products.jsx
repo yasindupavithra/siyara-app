@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -66,6 +66,7 @@ const ProductImage = styled.div`
   font-size: 4rem;
   position: relative;
   overflow: hidden;
+  cursor: ${props => props.hasImage ? 'pointer' : 'default'};
 
   &::before {
     content: '';
@@ -77,12 +78,33 @@ const ProductImage = styled.div`
     background: ${props => props.hasImage ? 'none' : 'linear-gradient(45deg, rgba(194, 171, 142, 0.8), rgba(177, 154, 125, 0.8))'};
     opacity: 0.9;
   }
+
+  &:hover {
+    &::after {
+      content: '🔍 Click to view full image';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      z-index: 10;
+    }
+  }
 `;
 
 const ProductImageElement = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+
+  ${ProductImage}:hover & {
+    transform: scale(1.05);
+  }
 `;
 
 const ProductIcon = styled.div`
@@ -96,51 +118,11 @@ const ProductContent = styled.div`
 
 const ProductTitle = styled.h3`
   color: #333;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
   font-size: 1.4rem;
   font-weight: 600;
   font-family: 'Manrope', sans-serif;
-`;
-
-const ProductDescription = styled.p`
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-`;
-
-const ProductFeatures = styled.div`
-  margin-bottom: 20px;
-`;
-
-const FeatureList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const FeatureItem = styled.li`
-  color: #555;
-  margin-bottom: 8px;
-  font-size: 0.9rem;
-  display: flex;
-  align-items: center;
-
-  &::before {
-    content: '✓';
-    color: #C2AB8E;
-    font-weight: bold;
-    margin-right: 8px;
-  }
-`;
-
-const ProductCategory = styled.span`
-  background: #C2AB8E;
-  color: white;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  text-align: center;
 `;
 
 const ViewDetailsButton = styled.button`
@@ -154,7 +136,6 @@ const ViewDetailsButton = styled.button`
   cursor: pointer;
   font-family: 'Manrope', sans-serif;
   transition: all 0.3s ease;
-  margin-top: 15px;
   width: 100%;
 
   &:hover {
@@ -163,97 +144,111 @@ const ViewDetailsButton = styled.button`
   }
 `;
 
+// Modal Styles
+const ModalOverlay = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+`;
+
+const ModalContent = styled.div`
+  background: white;
+  border-radius: 15px;
+  max-width: 90vw;
+  max-height: 90vh;
+  position: relative;
+  overflow: hidden;
+`;
+
+const ModalImage = styled.img`
+  width: 100%;
+  height: auto;
+  max-height: 80vh;
+  object-fit: contain;
+`;
+
+const ModalCloseButton = styled.button`
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.9);
+  }
+`;
+
+const ModalTitle = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 20px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-family: 'Manrope', sans-serif;
+`;
+
 const Products = () => {
   const navigate = useNavigate();
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const products = [
     {
       icon: "🚪",
       title: "Doors & Door Frames",
-      description: "High-quality wooden ames crafted with precision and durability. Available in various designs and finishes to match your interior style.",
-      features: [
-        "Solid wood construction",
-        "Multiple design options",
-        "Custom sizing available",
-        "Premium finishes",
-        "Durable and long-lasting"
-      ],
-      category: "Wooden Doors",
       image: "https://i.postimg.cc/RCDgkB4v/IMG-20250806-WA0109.jpg",
       route: "doors-door-frames"
     },
     {
       icon: "🪟",
       title: "Window Frame & Sashes",
-      description: "Custom wooden window frames and sashes designed for both functionality and aesthetic appeal. Perfect for traditional and modern homes.",
-      features: [
-        "Weather-resistant design",
-        "Smooth operation",
-        "Custom measurements",
-        "Multiple wood types",
-        "Professional installation"
-      ],
-      category: "Window Frames",
       image: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2053&q=80",
       route: "window-frame-sashes"
     },
     {
       icon: "🛤️",
       title: "Hand Rail",
-      description: "Elegant wooden hand rails for staircases and balconies. Combining safety with sophisticated design for your home or commercial space.",
-      features: [
-        "Safety-compliant design",
-        "Smooth finish",
-        "Custom designs",
-        "Durable construction",
-        "Easy maintenance"
-      ],
-      category: "Safety & Design",
       image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       route: "hand-rail"
     },
     {
       icon: "🥘",
       title: "Pantry Cupboards",
-      description: "Custom pantry cupboards designed to maximize storage space while maintaining a beautiful appearance. Perfect for kitchens and storage areas.",
-      features: [
-        "Optimized storage space",
-        "Adjustable shelves",
-        "Quality hardware",
-        "Custom dimensions",
-        "Professional finish"
-      ],
-      category: "Storage Solutions",
       image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       route: "pantry-cupboards"
     },
     {
       icon: "🏠",
       title: "Ceiling & Roof",
-      description: "Wooden ceiling and roof solutions that add warmth and character to any space. Available in various patterns and finishes.",
-      features: [
-        "Acoustic benefits",
-        "Thermal insulation",
-        "Custom patterns",
-        "Natural wood finish",
-        "Professional installation"
-      ],
-      category: "Ceiling & Roofing",
       image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       route: "ceiling-roof"
     },
     {
       icon: "🪵",
       title: "Wooden Flooring",
-      description: "Premium wooden flooring solutions for homes and commercial spaces. Available in various wood types, patterns, and finishes.",
-      features: [
-        "High-quality wood",
-        "Multiple patterns",
-        "Easy maintenance",
-        "Long-lasting finish",
-        "Professional installation"
-      ],
-      category: "Flooring",
       image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
       route: "wooden-flooring"
     }
@@ -263,8 +258,13 @@ const Products = () => {
     navigate(`/products/${product.route}`);
   };
 
-  const handleContact = (productName) => {
-    alert(`Thank you for your interest in ${productName}! We'll contact you soon with more details.`);
+  const handleImageClick = (image, title, e) => {
+    e.stopPropagation(); // Prevent card click when clicking image
+    setSelectedImage({ image, title });
+  };
+
+  const closeModal = () => {
+    setSelectedImage(null);
   };
 
   return (
@@ -281,7 +281,10 @@ const Products = () => {
         <ProductsGrid>
           {products.map((product, index) => (
             <ProductCard key={index} onClick={() => handleProductClick(product)}>
-              <ProductImage hasImage={product.image}>
+              <ProductImage 
+                hasImage={product.image}
+                onClick={(e) => product.image && handleImageClick(product.image, product.title, e)}
+              >
                 {product.image ? (
                   <ProductImageElement src={product.image} alt={product.title} />
                 ) : (
@@ -290,17 +293,6 @@ const Products = () => {
               </ProductImage>
               <ProductContent>
                 <ProductTitle>{product.title}</ProductTitle>
-                <ProductDescription>{product.description}</ProductDescription>
-                
-                <ProductFeatures>
-                  <FeatureList>
-                    {product.features.map((feature, featureIndex) => (
-                      <FeatureItem key={featureIndex}>{feature}</FeatureItem>
-                    ))}
-                  </FeatureList>
-                </ProductFeatures>
-
-                <ProductCategory>{product.category}</ProductCategory>
                 
                 <ViewDetailsButton onClick={(e) => {
                   e.stopPropagation();
@@ -313,6 +305,18 @@ const Products = () => {
           ))}
         </ProductsGrid>
       </ProductsContent>
+
+      {/* Image Modal */}
+      {selectedImage && (
+        <ModalOverlay onClick={closeModal}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <ModalCloseButton onClick={closeModal}>×</ModalCloseButton>
+            <ModalImage src={selectedImage.image} alt={selectedImage.title} />
+            <ModalTitle>{selectedImage.title}</ModalTitle>
+          </ModalContent>
+        </ModalOverlay>
+      )}
+
       <Footer />
     </ProductsContainer>
   );

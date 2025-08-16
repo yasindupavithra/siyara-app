@@ -7,11 +7,13 @@ export const HomeContainer = styled.div`
 
     .belowNavbar {
         display: flex;
+        justify-content: center;
+        margin-bottom: 30px;
     }
 
     .sideImage {
-        height: 650px;
-        width: 370px;
+        height: 450px;
+        width: 300px;
     }
 `;
 

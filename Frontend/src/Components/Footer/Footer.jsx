@@ -71,10 +71,6 @@ const Footer = () => {
             <h1 className="titles">Popular Categories</h1>
             <p>Doors & Door Frames, Window Frame & Sashes, Hand Rail, Pantry Cupboards, Ceiling & Roof, Wooden Flooring, Custom Wood Products, Interior Doors, Exterior Doors, Door Frames, Window Frames, Staircase Hand Rails, Kitchen Cupboards, Wooden Ceilings, Premium Flooring</p>
           </PopularCategories>
-          <PopularBrands>
-            <h1 className="titles">Our Services</h1>
-            <p>Custom Wood Manufacturing, Professional Installation, Design Consultation, Quality Craftsmanship, Premium Materials, Custom Sizing, Professional Finish, Durable Construction, Weather-resistant Products, Sound Insulation</p>
-          </PopularBrands>
           <Cities>
             <h1 className="titles">Areas we serve</h1>
             <p>Colombo, Kandy, Galle, Jaffna, Anuradhapura, Kurunegala, Matara, Ratnapura, Badulla, Polonnaruwa, Trincomalee, Batticaloa, Ampara, Monaragala, Hambantota, Puttalam, Vavuniya, Mullaitivu, Kilinochchi and many more</p>

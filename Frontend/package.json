@@ -1,7 +1,7 @@
 {
-  "name": "siyara-soliwood-website",
+  "name": "furniturestore-website",
   "version": "0.1.0",
-  "description": "Siyara Soliwood (PVT) Ltd - Premium Wood Products and Furniture Website",
+  "description": "FurnitureStore - Premium Wood Products and Furniture Website",
   "private": true,
   "dependencies": {
     "-clone-frontend": "file:..",

@@ -54,7 +54,7 @@ function CardPayment(){
               </Link>
               <img
                 src={logo}
-                alt="pepperfrylogo"
+                alt="furniturestorelogo"
                 className={styles.leftDiv12img}
               />
             </div>
