@@ -4,7 +4,6 @@
   "description": "FurnitureStore - Premium Wood Products and Furniture Website",
   "private": true,
   "dependencies": {
-    "-clone-frontend": "file:..",
     "@emotion/react": "^11.8.2",
     "@emotion/styled": "^11.8.1",
     "@mui/icons-material": "^5.5.1",
@@ -16,8 +15,6 @@
     "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "canvas-confetti": "^1.5.1",
-    "i": "^0.3.7",
-    "npm": "^8.8.0",
     "react": "^17.0.2",
     "react-alert": "^7.0.3",
     "react-alice-carousel": "^2.5.1",
