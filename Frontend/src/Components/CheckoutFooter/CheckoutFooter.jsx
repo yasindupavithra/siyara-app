@@ -8,63 +8,39 @@ const CheckoutFooter = () => {
         <FooterHeader> WE ACCEPT </FooterHeader>
         <Flex>
           <div>
-            <img
-              src="https://ii2.pepperfry.com/images/new-visa-logo.png"
-              alt=""
-            />
+            <img src="https://dummyimage.com/60x36/ccc/000.png&text=VISA" alt="" />
           </div>
 
           <div>
-            <img
-              src="https://ii2.pepperfry.com/images/800-px-maestro-logosvg.png"
-              alt=""
-            />
+            <img src="https://dummyimage.com/60x36/ccc/000.png&text=MAESTRO" alt="" />
           </div>
 
           <div>
-            <img
-              src="https://ii2.pepperfry.com/images/american-express-icon.png"
-              alt=""
-            />
+            <img src="https://dummyimage.com/60x36/ccc/000.png&text=AMEX" alt="" />
           </div>
 
           <div>
-            <img
-              src="https://ii2.pepperfry.com/images/d-i-n-e-r-s-c-a-r-d-1.png"
-              alt=""
-            />
+            <img src="https://dummyimage.com/60x36/ccc/000.png&text=DINERS" alt="" />
           </div>
 
           <div>
-            <img
-              src="https://ii2.pepperfry.com/images/220-px-ru-paysvg.png"
-              alt=""
-            />
+            <img src="https://dummyimage.com/60x36/ccc/000.png&text=RUPAY" alt="" />
           </div>
 
           <div>
-            <img
-              src="https://ii2.pepperfry.com/images/mastercard-logo-png.png"
-              alt=""
-            />
+            <img src="https://dummyimage.com/60x36/ccc/000.png&text=MASTERCARD" alt="" />
           </div>
 
           <Wallet>
             <div>
-              <img
-                src="https://ii2.pepperfry.com/images/982-wallet.png"
-                alt=""
-              />
+              <img src="https://dummyimage.com/36x36/ccc/000.png&text=W" alt="" />
             </div>
             <FooterText>Wallet</FooterText>
           </Wallet>
 
           <Wallet>
             <div>
-              <img
-                src="https://ii2.pepperfry.com/images/985-netbanking.png"
-                alt=""
-              />
+              <img src="https://dummyimage.com/36x36/ccc/000.png&text=N" alt="" />
             </div>
             <FooterText>Internet banking</FooterText>
           </Wallet>
@@ -76,10 +52,7 @@ const CheckoutFooter = () => {
 
         <Flex>
           <Grid>
-            <img
-              src="https://ii1.pepperfry.com/images/svg/calendar-1.svg"
-              alt=""
-            />
+            <img src="https://dummyimage.com/24x24/ccc/000.png&text=C" alt="" />
             <div>
               <span>No Cost EMIs: </span> Now pay in easy installments at no
               additional cost
@@ -95,16 +68,10 @@ const CheckoutFooter = () => {
         <FooterHeader>100% SAFE & SECURE</FooterHeader>
         <Flex>
           <div>
-            <img
-              src="https://ii2.pepperfry.com/images/download-1.png"
-              alt=""
-            />
+            <img src="https://dummyimage.com/48x24/ccc/000.png&text=SSL" alt="" />
           </div>
           <div>
-            <img
-              src="https://ii2.pepperfry.com/images/p-c-i-d-s-s.png"
-              alt=""
-            />
+            <img src="https://dummyimage.com/48x24/ccc/000.png&text=PCI" alt="" />
           </div>
         </Flex>
       </div>

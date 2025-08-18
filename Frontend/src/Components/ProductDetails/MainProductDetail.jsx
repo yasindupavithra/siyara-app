@@ -88,11 +88,7 @@ export const MainProductDetail = () =>{
           <a href="#" onClick={(e) => e.preventDefault()}>EMI option</a>
           <br />
           <br />
-          <img
-            className="offer"
-            src="https://ii2.pepperfry.com/media/wysiwyg/banners/Promo_Web_VIPCoupon_2X_05042022_nd.jpg"
-            alt=""
-          />
+          <img className="offer" src="https://picsum.photos/seed/promo/728/90" alt="" />
           <br />
           <br />
           <label htmlFor="">

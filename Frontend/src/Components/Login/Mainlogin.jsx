@@ -16,7 +16,7 @@ export const MainLogin =(props)=>{
     return (props.trigger) ? (
         <div className="popup">
             <span className="left">
-                <img src="https://ii1.pepperfry.com/media/wysiwyg/banners/Web_IMG_17Dec_1X_05042022.jpg" alt="offer" className="offer" />
+                <img src="https://picsum.photos/seed/loginpromo/640/480" alt="offer" className="offer" />
             </span>
             <span className="right">
                 <div className="quit">
@@ -30,8 +30,8 @@ export const MainLogin =(props)=>{
             <div>
                 <center>
                 <span>OR Continue with</span>
-                <span><img src="https://ii1.pepperfry.com/images/social_login_fb_2x.png" alt="" className="icon"/></span>
-                <span><img src="https://ii1.pepperfry.com/images/social_login_google_2x.png" alt="" className="icon"/></span>    
+                <span><img src="https://dummyimage.com/32x32/1877f2/fff.png&text=f" alt="" className="icon"/></span>
+                <span><img src="https://dummyimage.com/32x32/db4a39/fff.png&text=G" alt="" className="icon"/></span>    
                 </center>
             </div>    
             </span>

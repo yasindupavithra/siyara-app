@@ -34,34 +34,22 @@ const Payment = () => {
       <FlexP>
         <div className="ImageDIv">
           <Radio />
-          <img
-            src="https://ii1.pepperfry.com/images/master-card-img.png"
-            alt=""
-          />
+          <img src="https://dummyimage.com/60x36/ccc/000.png&text=MC" alt="" />
         </div>
 
         <div className="ImageDIv">
           <Radio />
-          <img
-            src="https://ii2.pepperfry.com/images/220-px-ru-paysvg.png"
-            alt=""
-          />
+          <img src="https://dummyimage.com/60x36/ccc/000.png&text=RUPAY" alt="" />
         </div>
 
         <div className="ImageDIv">
           <Radio />
-          <img
-            src="https://ii2.pepperfry.com/images/800-px-maestro-logosvg.png"
-            alt=""
-          />
+          <img src="https://dummyimage.com/60x36/ccc/000.png&text=MAESTRO" alt="" />
         </div>
 
         <div className="ImageDIv">
           <Radio />
-          <img
-            src="https://ii2.pepperfry.com/images/new-visa-logo.png"
-            alt=""
-          />
+          <img src="https://dummyimage.com/60x36/ccc/000.png&text=VISA" alt="" />
         </div>
 
       </FlexP>

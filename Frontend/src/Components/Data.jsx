@@ -2,49 +2,49 @@
 export const Data = [
   {
     id: 1,
-    src: "https://ii2.pepperfry.com/media/catalog/product/e/l/494x544/elle-3-seater-sofa-in-printed-fabric-----casacraft-by-pepperfry-elle-3-seater-sofa-in-printed-fabric-imlbns.jpg",
+    src: "https://picsum.photos/seed/product1/494/544",
     title: "Elle Decor 3 Seater Velvet Sofa In Abstract Print",
     company: "CasaCraft",
     price: "33,428"
   },
   {
     id: 2,
-    src: "https://ii3.pepperfry.com/media/catalog/product/e/l/494x544/elle-3-seater-sofa-in-printed-fabric-----casacraft-by-pepperfry-elle-3-seater-sofa-in-printed-fabric-5ed9ra.jpg",
+    src: "https://picsum.photos/seed/product2/494/544",
     title: "Elle Decor 3 Seater Velvet Sofa In Abstract Print",
     company: "CasaCraft",
     price: "33,000"
   },
   {
     id: 3,
-    src: "https://ii3.pepperfry.com/media/catalog/product/e/a/494x544/ease-2-seater-sofa-in-brown-colour-by-duroflex-ease-2-seater-sofa-in-brown-colour-by-duroflex-gzkkfu.jpg",
+    src: "https://picsum.photos/seed/product3/494/544",
     title: "Ease 2 Seater Sofa in Brown Colour",
     company: "Duroflex",
     price: "16,000"
   },
   {
     id: 4,
-    src: "https://ii1.pepperfry.com/media/catalog/product/s/n/494x544/snoozer-three-seater-sofa-in-cobalt-blue-colour-by-wakefit-snoozer-three-seater-sofa-in-cobalt-blue--z8nt6m.jpg",
+    src: "https://picsum.photos/seed/product4/494/544",
     title: "Snoozer Three Seater Sofa in Cobalt Blue Colour",
     company: "Wakefit",
     price: "15,000"
   },
   {
     id: 5,
-    src: "https://ii1.pepperfry.com/media/catalog/product/o/p/494x544/optima-2-seater-sofa-in-black---grey-colour-by-adorn-homez-optima-2-seater-sofa-in-black---grey-colo-vgimju.jpg",
+    src: "https://picsum.photos/seed/product5/494/544",
     title: "Optima 2 Seater Sofa in Black & Grey Colour",
     company: "Adorn Homez",
     price: "13,000"
   },
   {
     id: 6,
-    src: "https://ii1.pepperfry.com/media/catalog/product/s/n/494x544/snooky-3-seater-sofa-in-grey-colour-by-febonic-snooky-3-seater-sofa-in-grey-colour-by-febonic-udhzjr.jpg",
+    src: "https://picsum.photos/seed/product6/494/544",
     title: "Snooky 3 Seater Sofa In Grey Colour",
     company: "Febonic",
     price: "23,000"
   },
   {
     id: 7,
-    src: "https://ii2.pepperfry.com/media/catalog/product/s/n/494x544/snooky-2-seater-sofa-in-grey-colour-by-febonic-snooky-2-seater-sofa-in-grey-colour-by-febonic-ui5gz1.jpg",
+    src: "https://picsum.photos/seed/product7/494/544",
     title: "Snooky 2 Seater Sofa In Grey Colour",
     company: "Febonic",
     price: "19,000"
@@ -57,10 +57,10 @@ export const products = [
     id: 1,
     name: "Esteban 3 Seater Half Leather Sofa in Grey Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-3-seater-half-leather-sofa-in-grey-colour-by-casacraft-esteban-3-seater-half-leather-sofa-in-8akxht.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-half-leather-three-seater-sofa-in-grey-colour-by-casacraft-esteban-half-leather-three-seater-nqijeg.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-half-leather-three-seater-sofa-in-grey-colour-by-casacraft-esteban-half-leather-three-seater-qoh0xi.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/e/s/800x400/esteban-half-leather-three-seater-sofa-in-grey-colour-by-casacraft-esteban-half-leather-three-seater-ra9orm.jpg"
+      "https://picsum.photos/seed/sofa1/800/400",
+      "https://picsum.photos/seed/sofa2/800/400",
+      "https://picsum.photos/seed/sofa3/800/400",
+      "https://picsum.photos/seed/sofa4/800/400"
     ],
     madeBy: "CasaCraft by FurnitureStore",
     offer_price: 113999,
@@ -78,10 +78,10 @@ export const products = [
     id: 2,
     name: "Amelia 2 Seater Sofa in Charcoal Grey Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/a/m/800x400/amelia-2-seater-sofa-in-charcoal-grey-colour-by-casacraft-amelia-2-seater-sofa-in-charcoal-grey-colo-mc0vev.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/a/m/800x400/amelia-two-seater-sofa-in-charcoal-grey-colour-by-casacraft-amelia-two-seater-sofa-in-charcoal-grey--3g7ees.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/a/m/800x400/amelia-two-seater-sofa-in-charcoal-grey-colour-by-casacraft-amelia-two-seater-sofa-in-charcoal-grey--qsy3nv.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/a/m/800x400/amelia-two-seater-sofa-in-charcoal-grey-colour-by-casacraft-amelia-two-seater-sofa-in-charcoal-grey--nifmkr.jpg"
+      "https://picsum.photos/seed/sofa5/800/400",
+      "https://picsum.photos/seed/sofa6/800/400",
+      "https://picsum.photos/seed/sofa7/800/400",
+      "https://picsum.photos/seed/sofa8/800/400"
     ],
     madeBy: "CasaCraft by FurnitureStore",
     offer_price: 28999,
@@ -99,10 +99,10 @@ export const products = [
     id: 3,
     name: "Miranda 3 Seater Sofa in Navy Blue Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/m/i/800x400/miranda-3-seater-sofa-in-navy-blue-colour-by-woodsworth-miranda-3-seater-sofa-in-navy-blue-colour-by-ee7lmu.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/m/i/800x400/miranda-three-seater-sofa-in-navy-blue-colour-by-woodsworth-miranda-three-seater-sofa-in-navy-blue-c-ecuf5p.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/m/i/800x400/miranda-three-seater-sofa-in-navy-blue-colour-by-woodsworth-miranda-three-seater-sofa-in-navy-blue-c-cjlzqj.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/m/i/800x400/miranda-three-seater-sofa-in-navy-blue-colour-by-woodsworth-miranda-three-seater-sofa-in-navy-blue-c-zd5fj8.jpg"
+      "https://picsum.photos/seed/sofa9/800/400",
+      "https://picsum.photos/seed/sofa10/800/400",
+      "https://picsum.photos/seed/sofa11/800/400",
+      "https://picsum.photos/seed/sofa12/800/400"
     ],
     madeBy: "Woodsworth by FurnitureStore",
     offer_price: 49999,
@@ -120,10 +120,10 @@ export const products = [
     id: 4,
     name: "Regina 3 Seater Sofa in Mint green Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/r/e/800x400/regina-3-seater-sofa-in-mint-green-colour---casacraft-by-pepperfry-regina-3-seater-sofa-in-mint-gree-pbaavz.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/r/e/800x400/regina-3-seater-sofa-in-mint-green-colour---casacraft-by-pepperfry-regina-3-seater-sofa-in-mint-gree-efy2xz.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/r/e/800x400/regina-3-seater-sofa-in-mint-green-colour---casacraft-by-pepperfry-regina-3-seater-sofa-in-mint-gree-ymibk7.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/r/e/800x400/regina-3-seater-sofa-in-mint-green-colour---casacraft-by-pepperfry-regina-3-seater-sofa-in-mint-gree-lx8jap.jpg"
+      "https://picsum.photos/seed/sofa13/800/400",
+      "https://picsum.photos/seed/sofa14/800/400",
+      "https://picsum.photos/seed/sofa15/800/400",
+      "https://picsum.photos/seed/sofa16/800/400"
     ],
     madeBy: "CasaCraft by FurnitureStore",
     offer_price: 53999,
@@ -141,10 +141,10 @@ export const products = [
     id: 5,
     name: "Alfredo 2 Seater Sofa in Ash Grey Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/a/l/800x400/alfredo-2-seater-sofa-in-ash-grey-colour-by-casacraft-alfredo-2-seater-sofa-in-ash-grey-colour-by-ca-mzyycc.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/a/l/800x400/alfredo-2-seater-sofa-in-ash-grey-colour-by-casacraft-alfredo-2-seater-sofa-in-ash-grey-colour-by-ca-pwhvkf.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/a/l/800x400/alfredo-two-seater-sofa-in-ash-grey-colour-by-casacraft-alfredo-two-seater-sofa-in-ash-grey-colour-b-fsj2xl.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/a/l/800x400/alfredo-two-seater-sofa-in-ash-grey-colour-by-casacraft-alfredo-two-seater-sofa-in-ash-grey-colour-b-ylyik8.jpg"
+      "https://picsum.photos/seed/sofa17/800/400",
+      "https://picsum.photos/seed/sofa18/800/400",
+      "https://picsum.photos/seed/sofa19/800/400",
+      "https://picsum.photos/seed/sofa20/800/400"
     ],
     madeBy: "CasaCraft by FurnitureStore",
     offer_price: 26999,
@@ -162,10 +162,10 @@ export const products = [
     id: 6,
     name: "Regina 3 Seater Sofa in Rust Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/r/e/800x400/regina-3-seater-sofa-in-rust-colour---casacraft-by-pepperfry-regina-3-seater-sofa-in-rust-colour---c-mh58yr.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/r/e/800x400/regina-3-seater-sofa-in-rust-colour---casacraft-by-pepperfry-regina-3-seater-sofa-in-rust-colour---c-dywmoe.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/r/e/800x400/regina-3-seater-sofa-in-rust-colour---casacraft-by-pepperfry-regina-3-seater-sofa-in-rust-colour---c-clloab.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/r/e/800x400/regina-3-seater-sofa-in-rust-colour---casacraft-by-pepperfry-regina-3-seater-sofa-in-rust-colour---c-x4hznb.jpg"
+      "https://picsum.photos/seed/sofa21/800/400",
+      "https://picsum.photos/seed/sofa22/800/400",
+      "https://picsum.photos/seed/sofa23/800/400",
+      "https://picsum.photos/seed/sofa24/800/400"
     ],
     madeBy: "CasaCraft by FurnitureStore",
     offer_price: 53999,
@@ -183,10 +183,10 @@ export const products = [
     id: 7,
     name: "Kaylee 2 Seater Sofa in Velvet Blue Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/k/a/800x400/kaylee-2-seater-sofa-in-velvet-blue-colour---casacraft-by-pepperfry-kaylee-2-seater-sofa-in-velvet-b-jot1m2.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/k/a/800x400/kaylee-2-seater-sofa-in-velvet-blue-colour---casacraft-by-pepperfry-kaylee-2-seater-sofa-in-velvet-b-pyjbkb.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/k/a/800x400/kaylee-2-seater-sofa-in-velvet-blue-colour---casacraft-by-pepperfry-kaylee-2-seater-sofa-in-velvet-b-umxirt.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/k/a/800x400/kaylee-2-seater-sofa-in-velvet-blue-colour---casacraft-by-pepperfry-kaylee-2-seater-sofa-in-velvet-b-fyrnew.jpg"
+      "https://picsum.photos/seed/sofa25/800/400",
+      "https://picsum.photos/seed/sofa26/800/400",
+      "https://picsum.photos/seed/sofa27/800/400",
+      "https://picsum.photos/seed/sofa28/800/400"
     ],
     madeBy: "CasaCraft",
     offer_price: 47999,
@@ -204,10 +204,10 @@ export const products = [
     id: 11,
     name: "Orpha Metal Settee In Grey Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/o/r/1100x1210/orpha-metal-settee-in-grey-colour---bohemiana-by-pepperfry-orpha-metal-settee-in-grey-colour---bohem-mejtxw.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/o/r/1100x1210/orpha-metal-settee-in-grey-colour---bohemiana-by-pepperfry-orpha-metal-settee-in-grey-colour---bohem-ffjad4.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/o/r/1100x1210/orpha-metal-settee-in-grey-colour---bohemiana-by-pepperfry-orpha-metal-settee-in-grey-colour---bohem-0ddwlc.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/o/r/1100x1210/orpha-metal-settee-in-grey-colour---bohemiana-by-pepperfry-orpha-metal-settee-in-grey-colour---bohem-tqsrtm.jpg"
+      "https://picsum.photos/seed/settee1/1100/1210",
+      "https://picsum.photos/seed/settee2/1100/1210",
+      "https://picsum.photos/seed/settee3/1100/1210",
+      "https://picsum.photos/seed/settee4/1100/1210"
     ],
     madeBy: "Bohemiana by FurnitureStore",
     offer_price: 14999,
@@ -225,10 +225,10 @@ export const products = [
     id: 12,
     name: "Rovel Solid Wood Settee In Brown Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/r/o/1100x1210/rovel-solid-wood-settee-in-brown-colour---bohemiana-by-pepperfry-rovel-solid-wood-settee-in-brown-co-stqtzh.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/r/o/1100x1210/rovel-solid-wood-settee-in-brown-colour---bohemiana-by-pepperfry-rovel-solid-wood-settee-in-brown-co-xyq6bc.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/r/o/1100x1210/rovel-solid-wood-settee-in-brown-colour---bohemiana-by-pepperfry-rovel-solid-wood-settee-in-brown-co-ehdmlo.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/r/o/1100x1210/rovel-solid-wood-settee-in-brown-colour---bohemiana-by-pepperfry-rovel-solid-wood-settee-in-brown-co-cmwopi.jpg"
+      "https://picsum.photos/seed/settee5/1100/1210",
+      "https://picsum.photos/seed/settee6/1100/1210",
+      "https://picsum.photos/seed/settee7/1100/1210",
+      "https://picsum.photos/seed/settee8/1100/1210"
     ],
     madeBy: "Bohemiana by FurnitureStore",
     offer_price: 17499,
@@ -246,10 +246,10 @@ export const products = [
     id: 21,
     name: "Marvel Ergonomic Chair in Black Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/m/a/1100x1210/marvel-ergonomic-chair-in-black-colour-by-durian-marvel-ergonomic-chair-in-black-colour-by-durian-0a4que.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/m/a/1100x1210/marvel-ergonomic-chair-in-black-colour-by-durian-marvel-ergonomic-chair-in-black-colour-by-durian-c0uh6r.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/m/a/1100x1210/marvel-ergonomic-chair-in-black-colour-by-durian-marvel-ergonomic-chair-in-black-colour-by-durian-33016z.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/m/a/1100x1210/marvel-marvel-anbckh.jpg"
+      "https://picsum.photos/seed/chair1/1100/1210",
+      "https://picsum.photos/seed/chair2/1100/1210",
+      "https://picsum.photos/seed/chair3/1100/1210",
+      "https://picsum.photos/seed/chair4/1100/1210"
     ],
     madeBy: "by Durian",
     offer_price: 9425,
@@ -267,10 +267,10 @@ export const products = [
     id: 22,
     name: "Elegant Modern Gaming Chair In Red Colour",
     img: [
-      "https://ii1.pepperfry.com/media/catalog/product/e/l/1100x1210/elegant-modern-gaming-chair-in-red-by-adiko-systems-elegant-modern-gaming-chair-in-red-by-adiko-syst-3g3uvv.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/a/d/1100x1210/adiko-elegant-modern-gaming-chair-in-redby-adiko-systems-adiko-elegant-modern-gaming-chair-in-redby--kucjpt.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/a/d/1100x1210/adiko-elegant-modern-gaming-chair-in-redby-adiko-systems-adiko-elegant-modern-gaming-chair-in-redby--q0q0zi.jpg",
-      "https://ii1.pepperfry.com/media/catalog/product/e/l/1100x1210/elegant-modern-gaming-chair-in-red-by-systems-elegant-modern-gaming-chair-in-red-by-systems-n0v17s.jpg"
+      "https://picsum.photos/seed/gaming1/1100/1210",
+      "https://picsum.photos/seed/gaming2/1100/1210",
+      "https://picsum.photos/seed/gaming3/1100/1210",
+      "https://picsum.photos/seed/gaming4/1100/1210"
     ],
     madeBy: "by Adiko Systems",
     offer_price: 14299,

@@ -33,7 +33,7 @@ A complete frontend clone of the FurnitureStore furniture website built with Rea
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd pepperfry-clone-master
+   cd project
    ```
 
 2. **Install dependencies**

@@ -76,16 +76,10 @@ const MainCheckout = () => {
             <Secur>100% SAFE & SECURE</Secur>
             <Flex>
               <div>
-                <img
-                  src="https://ii2.pepperfry.com/images/download-1.png"
-                  alt=""
-                />
+                <img src="https://dummyimage.com/48x24/ccc/000.png&text=SSL" alt="" />
               </div>
               <div>
-                <img
-                  src="https://ii2.pepperfry.com/images/p-c-i-d-s-s.png"
-                  alt=""
-                />
+                <img src="https://dummyimage.com/48x24/ccc/000.png&text=PCI" alt="" />
               </div>
             </Flex>
           </div>
