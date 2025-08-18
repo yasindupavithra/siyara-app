@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "A standalone frontend clone of the FurnitureStore Website with local data management",
   "main": "index.js",
+  "engines": {
+    "node": "20.x",
+    "npm": "10.x"
+  },
   "scripts": {
     "start": "cd Frontend && npm start",
     "build": "cd Frontend && npm install && npm run build",
