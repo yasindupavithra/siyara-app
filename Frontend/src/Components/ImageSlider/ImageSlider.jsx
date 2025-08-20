@@ -9,7 +9,7 @@ const Button = styled.button`
   width: 14px;
   border-radius: 50%;
   border: none;
-  background-color: ${({ active }) => (active ? "#000000" : "#c4c4c4")};
+  background-color: ${({ $active }) => ($active ? "#000000" : "#c4c4c4")};
   transition: background-color 0.3s ease;
 `;
 
@@ -17,16 +17,18 @@ const ImageSlider = () => {
   const [activeItemIndex, setActiveItemIndex] = useState(0);
   const carouselRef = useRef();
 
-  // Auto-slide every 3 seconds for better user experience
+  // Auto-slide every 3 seconds
   useEffect(() => {
     const interval = setInterval(() => {
-      const nextIndex = (activeItemIndex + 1) % SliderData.length;
-      carouselRef.current.goTo(nextIndex);
-      setActiveItemIndex(nextIndex);
+      setActiveItemIndex(prevIndex => {
+        const nextIndex = (prevIndex + 1) % SliderData.length;
+        carouselRef.current.goTo(nextIndex);
+        return nextIndex;
+      });
     }, 3000);
 
     return () => clearInterval(interval);
-  }, [activeItemIndex]);
+  }, []);
 
   return (
     <div style={{ width: "100%", maxWidth: "1200px", margin: "0 auto" }}>
@@ -44,7 +46,7 @@ const ImageSlider = () => {
               alt={`slide-${i}`}
               style={{
                 width: "100%",
-                maxHeight: "450px", // 👈 Reduced height for better balance
+                maxHeight: "450px",
                 objectFit: "cover",
                 borderRadius: "8px",
                 boxShadow: "0 4px 8px rgba(0,0,0,0.1)"
@@ -58,7 +60,7 @@ const ImageSlider = () => {
         {SliderData.map((_, idx) => (
           <Button
             key={idx}
-            active={idx === activeItemIndex}
+            $active={idx === activeItemIndex}
             onClick={() => {
               carouselRef.current.goTo(idx);
               setActiveItemIndex(idx);

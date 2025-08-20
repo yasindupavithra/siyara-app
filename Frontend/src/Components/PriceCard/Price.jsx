@@ -1,5 +1,4 @@
-import { Grid } from "../../Utils/Common.js";
-import React,{useEffect,useState} from "react";
+import { useEffect, useState } from "react";
 import {
   Blue,
   Green,
@@ -10,45 +9,36 @@ import {
   Hr,
   PriceDiv,
 } from "./PriceCSS";
- import { useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 
-
-
-const Price = ({cart}) => {
-  
+const Price = () => {
   const { cartItems } = useSelector((state) => state.cart);
-  
-    const [price, setPrice] = useState(0);
-    const [totalItem, setTotalItem] = useState(0);
-    const [discount, setDiscount] = useState(0);
-    const [totalPrice, setTotalPrice] = useState(0);
 
-    useEffect(() => {
-      let items = 0;
-      let price = 0;
-      let discount = 0;
-      let quantity = 0;
+  const [price, setPrice] = useState(0);
+  const [discount, setDiscount] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+  // If you really need item count later, add:
+  // const [totalItem, setTotalItem] = useState(0);
 
-      cartItems.forEach((el) => {
-        price += el.price * el.quantity;
-        discount += Math.round(el.price * el.discount / 100)
-      });
+  useEffect(() => {
+    let sumItems = 0;
+    let sumPrice = 0;
+    let sumDiscount = 0;
 
-          console.log(price,discount);
+    cartItems.forEach((el) => {
+      sumItems += el.quantity;
+      sumPrice += el.price * el.quantity;
+      // include quantity in discount too
+      sumDiscount += Math.round((el.price * el.discount * el.quantity) / 100);
+    });
 
-  
-      let totalPrice = price - discount;
+    const finalPrice = sumPrice - sumDiscount;
 
-     // console.log(withoutOfferprice, totalPrice, totaldiscount);
-
-      setTotalItem(items);
-      setPrice(price);
-      setDiscount(discount);
-      setTotalPrice(totalPrice + 99 + 1500);
-    }, [cartItems]);
-
-
-
+    // setTotalItem(sumItems); // enable if you render it
+    setPrice(sumPrice);
+    setDiscount(sumDiscount);
+    setTotalPrice(finalPrice + 99 + 1500); // GiveIndia + Assembly
+  }, [cartItems]);
 
   return (
     <PriceDiv>
@@ -67,14 +57,14 @@ const Price = ({cart}) => {
 
             <div className="cardDisplay">
               <Blue>Cashback/Refund Credits Redeemed</Blue>
-              <Blue>(-) ₹{0}</Blue>
+              <Blue>(-) ₹ {0}</Blue>
             </div>
 
             <div className="cardDisplay">
               <div>
                 Delivery <Orange> (FREE) </Orange>
               </div>
-              <div> ₹ 0 </div>
+              <div>₹ 0</div>
             </div>
 
             <div className="cardDisplay">
@@ -91,7 +81,7 @@ const Price = ({cart}) => {
           <Hr />
 
           <TotalPrice>
-            <div className="total"> Total</div>
+            <div className="total">Total</div>
             <div>
               <div className="totalPrice">₹ {totalPrice}</div>
               <div className="tax">(Inclusive of all taxes)</div>
@@ -104,6 +94,5 @@ const Price = ({cart}) => {
     </PriceDiv>
   );
 };
-
 
 export default Price;

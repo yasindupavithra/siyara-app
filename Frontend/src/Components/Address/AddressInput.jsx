@@ -1,55 +1,51 @@
-import React,{useEffect} from 'react'
-import {  Checkbox } from "@mui/material";
+import React from 'react'
+import { Checkbox } from "@mui/material";
 import { useState } from "react";
 import { Form, Button, AdressInputContainer } from "./AddressCSS";
 import { useNavigate } from "react-router-dom";
 import { saveShippingInfo } from "../../Redux/Cart/action"
-import { useSelector, useDispatch } from "react-redux";
-
-
+import { useDispatch } from "react-redux";
 
 const AddressInput = () => {
 
+  let initialValue = {
+    name: "",
+    phoneNo: "",
+    pincode: "",
+    address: "",
+    city: "",
+    state: "",
+    country: "India",
+  };
 
-
-let initialValue = {
-  name: "",
-  phoneNo: "",
-  pincode: "",
-  address: "",
-  city: "",
-  state: "",
-  country: "India",
-};
-
-const [formData, setFormData] = useState(initialValue);
-const [filled,setFilled] = useState(false)
+  const [formData, setFormData] = useState(initialValue);
   const navigate = useNavigate();
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
- const handleChange = (e) => {
-     const { name, value } = e.target;
-     setFormData({ ...formData, [name]: value });
- };
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
 
-   const handleSubmit = () => {
-    if (formData.name === "" || formData.phoneNo === "" || formData.pincode === "" || formData.address === "" || formData.city === "" || formData.state === "") {
-    alert("Please Fill all box");
-     }else{
-       setFilled(true);
-       dispatch( saveShippingInfo(formData) );
-     navigate("/checkout"); 
-      
-     }
-
- };
-
-
+  const handleSubmit = () => {
+    if (
+      formData.name === "" ||
+      formData.phoneNo === "" ||
+      formData.pincode === "" ||
+      formData.address === "" ||
+      formData.city === "" ||
+      formData.state === ""
+    ) {
+      alert("Please Fill all box");
+    } else {
+      dispatch(saveShippingInfo(formData));
+      navigate("/checkout");
+    }
+  };
 
   return (
     <AdressInputContainer>
       <Form>
-        {/* <FormLeft> */}
         <h2>Add New Shipping Address</h2>
         <div>
           <div>
@@ -71,7 +67,7 @@ const [filled,setFilled] = useState(false)
               name="phoneNo"
               placeholder=" 95820XXXXX"
               onChange={handleChange}
-              style={{marginLeft:"70px"}}
+              style={{ marginLeft: "70px" }}
             />
           </div>
 
@@ -128,14 +124,11 @@ const [filled,setFilled] = useState(false)
             <span> Billing Address Is The Same As Shipping Address</span>
           </div>
 
-         
-            <Button onClick={handleSubmit}>SAVE & CONTINUE </Button>
-       
+          <Button onClick={handleSubmit}>SAVE & CONTINUE </Button>
         </div>
-        {/* </Left> */}
       </Form>
     </AdressInputContainer>
   );
-}
+};
 
 export { AddressInput }

@@ -1,17 +1,14 @@
-
 import './App.css';
-import WebFont from "webfontloader"
-import React from "react"
-
+import WebFont from "webfontloader";
+import { useEffect } from "react";
 
 import Routing from './Routes/Routing';
 
 function App() {
-
- React.useEffect(() => {
+  useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Manrope", "sans - serif"]
+        families: ["Manrope", "sans-serif"],
       },
     });
   }, []);
