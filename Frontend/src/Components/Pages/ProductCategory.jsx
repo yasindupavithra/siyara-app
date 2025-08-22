@@ -181,70 +181,83 @@ const ProductCategory = () => {
     "doors-door-frames": {
       title: "Doors & Door Frames",
       subtitle: "High-quality wooden doors and door frames crafted with precision and durability",
-      description: "",
-      features: [],
       photos: {
         "Entrance Doors": [
-          { 
-            url: "https://i.postimg.cc/FFW0qHrK/IMG-20250806-WA0163.jpg", 
-            title: "Modern Double Door",
-            
-          },
-          { 
-            url: "https://i.postimg.cc/gjQX0rjq/IMG-20250806-WA0157.jpg", 
-            title: "Classic Wooden Door",
-         
-          }
+          { url: "https://i.postimg.cc/FFW0qHrK/IMG-20250806-WA0163.jpg", title: "Modern Double Door" },
+          { url: "https://i.postimg.cc/gjQX0rjq/IMG-20250806-WA0157.jpg", title: "Classic Wooden Door" }
         ],
         "Interior Doors": [
-          { 
-            url: "https://i.postimg.cc/SRMc0HfK/IMG-20250806-WA0173.jpg", 
-            title: "Bedroom Door",
-          
-          },
-          
-          { 
-            url: "https://i.postimg.cc/prX3qYfk/IMG-20250806-WA0174.jpg", 
-            title: "Bathroom Door",
-            
-          }
+          { url: "https://i.postimg.cc/SRMc0HfK/IMG-20250806-WA0173.jpg", title: "Bedroom Door" },
+          { url: "https://i.postimg.cc/prX3qYfk/IMG-20250806-WA0174.jpg", title: "Bathroom Door" }
         ],
         "Door Frames": [
-          { 
-            url: "https://i.postimg.cc/RCDgkB4v/IMG-20250806-WA0109.jpg", 
-            title: "Custom Door Frame",
-           
-          },
-          { 
-            url: "https://i.postimg.cc/TYyJ0Jr8/Whats-App-Image-2025-08-17-at-22-15-51-12ab92fc.jpg", 
-            title: "Custom Door Frame",
-            
-          }
-        ],
-        
-        
+          { url: "https://i.postimg.cc/RCDgkB4v/IMG-20250806-WA0109.jpg", title: "Custom Door Frame" },
+          { url: "https://i.postimg.cc/TYyJ0Jr8/Whats-App-Image-2025-08-17-at-22-15-51-12ab92fc.jpg", title: "Custom Door Frame" }
+        ]
       }
     },
     "window-frame-sashes": {
       title: "Window Frame & Sashes",
       subtitle: "Custom wooden window frames and sashes designed for both functionality and aesthetic appeal",
-      description: "Our window frames and sashes combine traditional craftsmanship with modern functionality. Each window is designed to provide excellent ventilation while maintaining energy efficiency and visual appeal.",
-      features: [
-        "Weather-resistant design for all climates",
-        "Smooth operation with quality hardware",
-        "Custom measurements for perfect fit",
-        "Multiple wood types available",
-        "Professional installation included",
-        "Energy-efficient design",
-        "Easy maintenance and cleaning"
-      ],
       photos: {
         "Window Frames": [
-          { 
-            url: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80", 
-            title: "Modern Window Frame",
-            description: "Contemporary design with clean lines"
-          }
+          { url: "https://i.postimg.cc/FsWWTKfq/IMG-20250823-WA0013.jpg", title: "Modern Window Frame" },
+          { url: "https://i.postimg.cc/HxgBrcKJ/IMG-20250823-WA0018.jpg", title: "Modern Window Frame" },
+          { url: "https://i.postimg.cc/tgHhk0zw/IMG-20250823-WA0020.jpg", title: "Modern Window Frame" },
+          { url: "https://i.postimg.cc/SsgCmnpb/IMG-20250823-WA0014.jpg", title: "Modern Window Frame" }
+        ]
+      }
+    },
+    "hand-rail": {
+      title: "Hand Rail",
+      subtitle: "Durable and stylish wooden hand rails for staircases and balconies",
+      photos: {
+        "Hand Rail Designs": [
+          { url: "https://i.postimg.cc/xyz123/handrail1.jpg", title: "Classic Hand Rail" },
+          { url: "https://i.postimg.cc/xyz123/handrail2.jpg", title: "Modern Hand Rail" }
+        ]
+      }
+    },
+    "pantry-cupboards": {
+      title: "Pantry Cupboards",
+      subtitle: "Custom-designed pantry cupboards combining functionality and elegance",
+      photos: {
+        "Cupboard Designs": [
+          { url: "https://i.postimg.cc/x8TrbF7b/IMG-20250806-WA0164.jpg", title: "Modern Pantry" },
+          { url: "https://i.postimg.cc/RhNBDDRx/IMG-20250806-WA0193.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/QN9NSFn9/IMG-20250806-WA0198.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/0Q6vt4ZR/IMG-20250806-WA0201.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/MK0SrV0T/IMG-20250816-WA0025.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/VNvP6hxr/IMG-20250816-WA0029.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/0Q6vt4ZR/IMG-20250806-WA0201.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/NMRJf7j2/IMG-20250806-WA0145.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/sg8wY0BZ/IMG-20250806-WA0122.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/ncSkxwGw/IMG-20250806-WA0110.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/VN8bPjpV/IMG-20250806-WA0113.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/yxkDyn3k/IMG-20250806-WA0112.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/3NVdSp29/IMG-20250806-WA0119.jpg", title: "Classic Pantry" },
+          { url: "https://i.postimg.cc/gJ0jG4DN/IMG-20250816-WA0023.jpg", title: "Classic Pantry" },
+
+        ]
+      }
+    },
+    "ceiling-roof": {
+      title: "Ceiling & Roof",
+      subtitle: "Stylish and strong wooden ceilings and roofing solutions",
+      photos: {
+        "Ceiling Designs": [
+          { url: "https://i.postimg.cc/4xC1nHjz/IMG-20250806-WA0105.jpg", title: "Wooden Ceiling" },
+          { url: "https://i.postimg.cc/B6wT3jxP/IMG-20250823-WA0035.jpg", title: "Roofing Design" }
+        ]
+      }
+    },
+    "wooden-flooring": {
+      title: "Wooden Flooring",
+      subtitle: "Premium quality wooden flooring for homes and offices",
+      photos: {
+        "Flooring Designs": [
+          { url: "https://i.postimg.cc/xyz123/floor1.jpg", title: "Classic Flooring" },
+          { url: "https://i.postimg.cc/xyz123/floor2.jpg", title: "Modern Flooring" }
         ]
       }
     }

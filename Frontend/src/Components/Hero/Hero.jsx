@@ -19,19 +19,19 @@ const Hero = () => {
             <h1>Shop By Room</h1>
             <Shop>
                 <div>
-                    <img src="https://picsum.photos/seed/living/800/600" alt={"Living"} />
+                    <img src="https://i.postimg.cc/FH97P9LM/IMG-20250806-WA0102.jpg" alt={"Living"} />
                     <div className="title">Living Room</div>
                 </div>
                 <div>
-                    <img src="https://picsum.photos/seed/work/800/600" alt={"WFH"} />
+                    <img src="https://i.postimg.cc/t42zqRGb/IMG-20250806-WA0133.jpg" alt={"WFH"} />
                     <div className="title">Work From Home</div>
                 </div>
                 <div>
-                    <img src="https://picsum.photos/seed/bedroom/800/600" alt={"Bedroom"} />
+                    <img src="https://i.postimg.cc/SN4LcYyq/IMG-20250806-WA0142.jpg" alt={"Bedroom"} />
                     <div className="title">Bedroom</div>
                 </div>
                 <div>
-                    <img src="https://picsum.photos/seed/kids/800/600" alt={"KidsRoom"} />
+                    <img src="https://i.postimg.cc/xTjJ0vfk/IMG-20250806-WA0118.jpg" alt={"KidsRoom"} />
                     <div className="title">Kids Room</div>
                 </div>
             </Shop>

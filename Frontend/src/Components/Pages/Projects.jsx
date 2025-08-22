@@ -220,7 +220,7 @@ const Projects = () => {
   // Project data with multiple images
   const projects = [
     {
-      title: "P02",
+      title: "P01",
       images: [
         "https://i.postimg.cc/t40rSLW2/IMG-20250806-WA0170.jpg",
         "https://i.postimg.cc/HW608F6V/IMG-20250806-WA0166.jpg",
@@ -228,7 +228,7 @@ const Projects = () => {
       ]
     },
     {
-      title: "Kitchen Cabinets",
+      title: "P02",
       images: [
         "https://i.postimg.cc/rsNSfPkY/IMG-20250806-WA0143.jpg",
         "https://i.postimg.cc/63khTZWt/IMG-20250806-WA0171.jpg",
@@ -237,21 +237,37 @@ const Projects = () => {
       ]
     },
     {
-      title: "Wardrobes & Closets",
+      title: "P03",
       images: [
-        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=800&q=80"
+        "https://i.postimg.cc/qMcNXtzc/IMG-20250806-WA0103.jpg",
+        "https://i.postimg.cc/FH97P9LM/IMG-20250806-WA0102.jpg",
+
       ]
     },
     {
-      title: "Staircases & Railings",
+      title: "P04",
       images: [
-        "https://images.unsplash.com/photo-1600607687644-c7171b42498b?auto=format&fit=crop&w=800&q=80"
+        "https://i.postimg.cc/PfYJTLzG/IMG-20250806-WA0135.jpg",
+        "https://i.postimg.cc/SxTNDcq9/IMG-20250806-WA0136.jpg",
+        "https://i.postimg.cc/fbVWFkTr/IMG-20250806-WA0137.jpg",
+        "https://i.postimg.cc/L4t9Gc22/IMG-20250806-WA0146.jpg",
+        "https://i.postimg.cc/0yBPpxdd/IMG-20250806-WA0149.jpg",
       ]
     },
     {
-      title: "Furniture & Fixtures",
+      title: "P05",
       images: [
-        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?auto=format&fit=crop&w=800&q=80"
+        "https://i.postimg.cc/4xqRYPsW/IMG-20250806-WA0139.jpg",
+        "https://i.postimg.cc/rmL6JpdW/IMG-20250806-WA0131.jpg",
+        
+      ]
+    },
+    {
+      title: "P06",
+      images: [
+        "https://i.postimg.cc/Z591zNpp/IMG-20250806-WA0156.jpg",
+        "https://i.postimg.cc/xjt7k5PL/IMG-20250806-WA0161.jpg",
+        
       ]
     }
   ];

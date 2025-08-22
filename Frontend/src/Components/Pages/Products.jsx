@@ -231,19 +231,19 @@ const Products = () => {
     {
       icon: "🛤️",
       title: "Hand Rail",
-      image: "https://images.unsplash.com/photo-1600607687644-c7171b42498b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://i.postimg.cc/4NxZKmkF/IMG-20250806-WA0159.jpg",
       route: "hand-rail"
     },
     {
       icon: "🥘",
       title: "Pantry Cupboards",
-      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://i.postimg.cc/x8TrbF7b/IMG-20250806-WA0164.jpg",
       route: "pantry-cupboards"
     },
     {
       icon: "🏠",
       title: "Ceiling & Roof",
-      image: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+      image: "https://i.postimg.cc/XY0wnSyL/IMG-20250823-WA0034.jpg",
       route: "ceiling-roof"
     },
     {
