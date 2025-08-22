@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import "../../style/form.css";
-import { useDispatch } from "react-redux";
 
 export const Register = (props) => {
   const [isAuthenticate, setisAuthenticated] = useState(false);
