@@ -118,50 +118,6 @@ const PhotoDescription = styled.p`
   line-height: 1.5;
 `;
 
-const ProductInfo = styled.div`
-  background: white;
-  border-radius: 15px;
-  padding: 30px;
-  margin-bottom: 40px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-`;
-
-const InfoTitle = styled.h2`
-  color: #333;
-  font-size: 1.8rem;
-  margin-bottom: 20px;
-  font-family: 'Manrope', sans-serif;
-`;
-
-const InfoDescription = styled.p`
-  color: #666;
-  line-height: 1.8;
-  font-size: 1rem;
-  margin-bottom: 25px;
-`;
-
-const FeatureList = styled.ul`
-  list-style: none;
-  padding: 0;
-  margin: 0;
-`;
-
-const FeatureItem = styled.li`
-  color: #555;
-  margin-bottom: 12px;
-  font-size: 1rem;
-  display: flex;
-  align-items: center;
-
-  &::before {
-    content: '✓';
-    color: #C2AB8E;
-    font-weight: bold;
-    margin-right: 12px;
-    font-size: 1.2rem;
-  }
-`;
-
 const ContactSection = styled.div`
   background: white;
   border-radius: 15px;
@@ -225,51 +181,50 @@ const ProductCategory = () => {
     "doors-door-frames": {
       title: "Doors & Door Frames",
       subtitle: "High-quality wooden doors and door frames crafted with precision and durability",
-      description: "Our doors and door frames are crafted from premium wood materials, ensuring both beauty and durability. We offer a wide range of designs from traditional to modern, all custom-made to fit your specific requirements.",
-      features: [
-        "Solid wood construction for maximum durability",
-        "Multiple design options to match your style",
-        "Custom sizing available for perfect fit",
-        "Premium finishes and treatments",
-        "Professional installation service",
-        "Weather-resistant for exterior doors",
-        "Sound insulation for interior doors"
-      ],
+      description: "",
+      features: [],
       photos: {
         "Entrance Doors": [
           { 
             url: "https://i.postimg.cc/FFW0qHrK/IMG-20250806-WA0163.jpg", 
             title: "Modern Double Door",
-            description: "Elegant double door with brass hardware"
+            
           },
           { 
             url: "https://i.postimg.cc/gjQX0rjq/IMG-20250806-WA0157.jpg", 
             title: "Classic Wooden Door",
-            description: "Traditional design with rich wood finish"
+         
           }
         ],
         "Interior Doors": [
           { 
             url: "https://i.postimg.cc/SRMc0HfK/IMG-20250806-WA0173.jpg", 
             title: "Bedroom Door",
-            description: "Privacy door with elegant design"
+          
           },
+          
           { 
             url: "https://i.postimg.cc/prX3qYfk/IMG-20250806-WA0174.jpg", 
             title: "Bathroom Door",
-            description: "Moisture-resistant interior door"
+            
           }
         ],
         "Door Frames": [
           { 
             url: "https://i.postimg.cc/RCDgkB4v/IMG-20250806-WA0109.jpg", 
             title: "Custom Door Frame",
-            description: "Precisely crafted door frames"
+           
+          },
+          { 
+            url: "https://i.postimg.cc/TYyJ0Jr8/Whats-App-Image-2025-08-17-at-22-15-51-12ab92fc.jpg", 
+            title: "Custom Door Frame",
+            
           }
-        ]
+        ],
+        
+        
       }
     },
-    // ====== other categories (same as your code) ======
     "window-frame-sashes": {
       title: "Window Frame & Sashes",
       subtitle: "Custom wooden window frames and sashes designed for both functionality and aesthetic appeal",
@@ -293,7 +248,6 @@ const ProductCategory = () => {
         ]
       }
     }
-    // ... keep your other categories same way
   };
 
   const currentProduct = productData[category];
@@ -329,16 +283,6 @@ const ProductCategory = () => {
           <CategorySubtitle>{currentProduct.subtitle}</CategorySubtitle>
         </CategoryHeader>
 
-        <ProductInfo>
-          <InfoTitle>About Our {currentProduct.title}</InfoTitle>
-          <InfoDescription>{currentProduct.description}</InfoDescription>
-          <FeatureList>
-            {currentProduct.features.map((feature, index) => (
-              <FeatureItem key={index}>{feature}</FeatureItem>
-            ))}
-          </FeatureList>
-        </ProductInfo>
-
         <PhotoGrid>
           {Object.entries(currentProduct.photos).map(([sectionTitle, photos]) => (
             <PhotoSection key={sectionTitle}>
@@ -367,7 +311,6 @@ const ProductCategory = () => {
       </CategoryContent>
       <Footer />
 
-      {/* ===== Modal View ===== */}
       {selectedPhoto && (
         <ModalOverlay onClick={() => setSelectedPhoto(null)}>
           <ModalImage src={selectedPhoto} alt="Full View" />

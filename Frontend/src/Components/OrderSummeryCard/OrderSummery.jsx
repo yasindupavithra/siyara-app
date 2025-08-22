@@ -1,10 +1,10 @@
-import React,{useState,useEffect} from 'react'
+
 import { useSelector } from 'react-redux';
 import plus from '../../Images/plus.svg'
 import { OrderContainer } from './OrderSummeryCSS';
 
 const OrderSummery = () => {
-  const { shippingInfo } = useSelector((state) => state.cart);
+
    const { cartItems } = useSelector((state) => state.cart);
 
 
