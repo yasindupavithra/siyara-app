@@ -59,17 +59,39 @@ export const MainProductDetail = () => {
           <br />
           <h4>
             Last Day to{" "}
-            <a href="#" onClick={(e) => e.preventDefault()}>
+            <button
+              className="link-btn"
+              onClick={(e) => e.preventDefault()}
+              style={{
+                background: "none",
+                border: "none",
+                color: "#1a73e8",
+                cursor: "pointer",
+                padding: 0,
+                fontSize: "inherit",
+              }}
+            >
               Earn Cashback upto 5%
-            </a>
+            </button>
           </h4>
 
-          <a href="#" onClick={(e) => e.preventDefault()}>
+          <button
+            className="link-btn"
+            onClick={(e) => e.preventDefault()}
+            style={{
+              background: "none",
+              border: "none",
+              color: "#1a73e8",
+              cursor: "pointer",
+              padding: 0,
+              fontSize: "inherit",
+            }}
+          >
             EMI option
-          </a>
+          </button>
           <br />
           <br />
-          <img className="offer" src="https://picsum.photos/seed/promo/728/90" alt="" />
+          <img className="offer" src="https://picsum.photos/seed/promo/728/90" alt="promo" />
           <br />
           <br />
           <label>

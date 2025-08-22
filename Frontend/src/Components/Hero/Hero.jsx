@@ -1,5 +1,5 @@
 import React from 'react'
-import { HomeContainer, RectangularBlock, Shop, Eyeing, Shoppee, New, HomeDecor, BlueBox, TopBrand, TwoBigImages, ImageDiv, Costumers, NeedHelpBuying  } from './HeroCSS'
+import { HomeContainer, RectangularBlock, Shop, Eyeing,   } from './HeroCSS'
 import ImageSlider from '../ImageSlider/ImageSlider'
 import { SliderData } from '../ImageSlider/SliderData';
 

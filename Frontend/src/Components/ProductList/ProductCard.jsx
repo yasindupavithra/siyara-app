@@ -3,8 +3,7 @@ import "../../style/product.css"
 import { Button, CardWrapper } from "./ProductListCSS";
 import { Link } from "react-router-dom";
 import Rating from "@mui/material/Rating";
-import { useParams } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import {  useDispatch } from "react-redux";
 import { addItemsToCart } from "../../Redux/Cart/action";
 
 
