@@ -8,14 +8,17 @@ function App() {
   useEffect(() => {
     WebFont.load({
       google: {
-        families: ["Manrope", "sans-serif"],
+        families: ["Manrope:400,500,600,700", "sans-serif"],
       },
     });
   }, []);
 
   return (
     <div className="App">
-      <Routing />
+      {/* Container එක fully responsive කරන්න */}
+      <div className="app-container">
+        <Routing />
+      </div>
     </div>
   );
 }
